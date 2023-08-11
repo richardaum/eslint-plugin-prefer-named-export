@@ -2,9 +2,9 @@
 
 export = {
   configs: {
-    recommended: import("./configs/recommended"),
+    recommended: require('./configs/recommended'),
   },
   rules: {
-    "prefer-named-export": import("./rules/prefer-named-export")
+    'prefer-named-export': require('./rules/prefer-named-export'),
   },
 };

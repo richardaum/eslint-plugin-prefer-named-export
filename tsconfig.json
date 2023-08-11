@@ -1,21 +1,8 @@
 {
-  "compilerOptions": {
-    "target": "es2015",
-    "module": "commonjs",
-    "outDir": "dist",
-    "declaration": false,
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "paths": {
-      "@/*": ["./*"]
-    }
+  "ts-node": {
+    "transpileOnly": true
   },
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {},
   "include": ["**/*"]
 }

@@ -89,14 +89,14 @@ const rule: TSESLint.RuleModule<"", []> = {
   },
 };
 
-export = rule;
+export default rule;
 `
   );
 
   fs.writeFileSync(
     testPath,
     `
-import { TSESLint } from "@typescript-eslint/experimental-utils";
+import { TSESLint } from "@typescript-eslint/utils";
 import rule from "@/src/rules/${ruleId}";
 
 new TSESLint.RuleTester().run("${ruleId}", rule, {

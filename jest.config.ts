@@ -1,9 +1,10 @@
 import { pathsToModuleNameMapper } from 'ts-jest';
-import { loadTsConfig } from '@/scripts/lib/load-tsconfig';
+import { loadTsConfig } from './scripts/lib/load-tsconfig';
+import type { Config } from 'jest';
 
 const tsConfig = loadTsConfig();
 
-export default {
+const config: Config = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   testMatch: ['**/tests/**/*.ts'],
@@ -11,3 +12,5 @@ export default {
     prefix: tsConfig.absoluteBaseUrl,
   }),
 };
+
+export default config;
