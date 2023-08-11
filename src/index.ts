@@ -6,6 +6,5 @@ export = {
     recommended: import('./configs/recommended'),
   },
   rules: {
-    'example-rule': import('./rules/example-rule'),
   },
 };

@@ -3,6 +3,5 @@
 export = {
   plugins: ['xxxx'],
   rules: {
-    'xxxx/example-rule': 'error',
   },
 };
