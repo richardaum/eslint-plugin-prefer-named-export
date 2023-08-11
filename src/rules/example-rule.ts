@@ -1,10 +1,10 @@
 import { TSESLint } from '@typescript-eslint/experimental-utils';
 
 const rule: TSESLint.RuleModule<'disallowExample', []> = {
+  defaultOptions: [],
   meta: {
     docs: {
       description: 'An example rule.',
-      category: 'Stylistic Issues',
       recommended: 'warn',
       url:
         'https://github.com/kotarella1110/template-typescript-eslint-plugin/blob/master/docs/rules/example-rule.md',
