@@ -1,4 +1,4 @@
-**forked from [mysticatea/template-eslint-plugin](https://github.com/mysticatea/template-eslint-plugin)**
+**forked from [richardaum/template-eslint-plugin](https://github.com/richardaum/template-eslint-plugin)**
 
 ---
 
@@ -31,14 +31,14 @@ Below is an example of README.
 
 ---
 
-# eslint-plugin-xxxx (template)
+# eslint-plugin-prefer-named-export (template)
 
 <!--
-[![npm version](https://img.shields.io/npm/v/eslint-plugin-xxxx.svg)](https://www.npmjs.com/package/eslint-plugin-xxxx)
-[![Downloads/month](https://img.shields.io/npm/dm/eslint-plugin-xxxx.svg)](http://www.npmtrends.com/eslint-plugin-xxxx)
-[![Build Status](https://travis-ci.org/mysticatea/eslint-plugin-xxxx.svg?branch=master)](https://travis-ci.org/mysticatea/eslint-plugin-xxxx)
-[![Coverage Status](https://codecov.io/gh/mysticatea/eslint-plugin-xxxx/branch/master/graph/badge.svg)](https://codecov.io/gh/mysticatea/eslint-plugin-xxxx)
-[![Dependency Status](https://david-dm.org/mysticatea/eslint-plugin-xxxx.svg)](https://david-dm.org/mysticatea/eslint-plugin-xxxx)
+[![npm version](https://img.shields.io/npm/v/eslint-plugin-prefer-named-export.svg)](https://www.npmjs.com/package/eslint-plugin-prefer-named-export)
+[![Downloads/month](https://img.shields.io/npm/dm/eslint-plugin-prefer-named-export.svg)](http://www.npmtrends.com/eslint-plugin-prefer-named-export)
+[![Build Status](https://travis-ci.org/richardaum/eslint-plugin-prefer-named-export.svg?branch=master)](https://travis-ci.org/richardaum/eslint-plugin-prefer-named-export)
+[![Coverage Status](https://codecov.io/gh/richardaum/eslint-plugin-prefer-named-export/branch/master/graph/badge.svg)](https://codecov.io/gh/richardaum/eslint-plugin-prefer-named-export)
+[![Dependency Status](https://david-dm.org/richardaum/eslint-plugin-prefer-named-export.svg)](https://david-dm.org/richardaum/eslint-plugin-prefer-named-export)
 -->
 
 A template for ESLint plugins.
@@ -48,7 +48,7 @@ A template for ESLint plugins.
 Use [npm](https://www.npmjs.com/) or a compatibility tool to install.
 
 ```
-$ npm install --save-dev eslint eslint-plugin-xxxx
+$ npm install --save-dev eslint eslint-plugin-prefer-named-export
 ```
 
 ### Requirements
@@ -62,16 +62,16 @@ Write your config file such as `.eslintrc.yml`.
 
 ```yml
 plugins:
-  - xxxx
+  - prefer-named-export
 rules:
-  xxxx/example-rule: error
+  prefer-named-export/example-rule: error
 ```
 
 See also [Configuring ESLint](https://eslint.org/docs/user-guide/configuring).
 
 ## Configs
 
-- `xxxx/recommended` ... enables the recommended rules.
+- `prefer-named-export/recommended` ... enables the recommended rules.
 
 ## Rules
 
@@ -81,7 +81,7 @@ See also [Configuring ESLint](https://eslint.org/docs/user-guide/configuring).
 
 | Rule ID                                           | Description      |     |
 | :------------------------------------------------ | :--------------- | :-: |
-| [xxxx/example-rule](./docs/rules/example-rule.md) | An example rule. | ⭐️ |
+| [prefer-named-export/example-rule](./docs/rules/example-rule.md) | An example rule. | ⭐️ |
 
 <!--RULE_TABLE_END-->
 

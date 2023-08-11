@@ -2358,9 +2358,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-xxxx@workspace:.":
+"eslint-plugin-prefer-named-export@workspace:.":
   version: 0.0.0-use.local
-  resolution: "eslint-plugin-xxxx@workspace:."
+  resolution: "eslint-plugin-prefer-named-export@workspace:."
   dependencies:
     "@types/eslint": ^8.44.2
     "@types/jest": ^29.5.3
