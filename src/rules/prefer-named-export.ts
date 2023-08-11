@@ -6,8 +6,11 @@ const rule: TSESLint.RuleModule<'preferNamedExport', []> = {
   meta: {
     type: 'problem',
     docs: {
-      // TODO: write the rule summary.
-      description: '',
+      description: [
+        'This rule enforces the use of named exports instead of default exports.',
+        'It checks for export statements that use the export default syntax with an identifier as the default export,',
+        'and suggests exporting the variable directly with a named export instead.',
+      ].join(' '),
       recommended: 'error',
       url: '',
     },
