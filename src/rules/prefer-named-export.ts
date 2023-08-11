@@ -1,18 +1,18 @@
-import { TSESLint } from "@typescript-eslint/experimental-utils";
+import { TSESLint } from '@typescript-eslint/experimental-utils';
 
-const rule: TSESLint.RuleModule<"preferNamedExport", []> = {
+const rule: TSESLint.RuleModule<'preferNamedExport', []> = {
   defaultOptions: [],
-  
+
   meta: {
-    type: "problem",
+    type: 'problem',
     docs: {
       // TODO: write the rule summary.
-      description: "",
+      description: '',
       recommended: false,
-      url: "",
+      url: '',
     },
     messages: {
-      preferNamedExport: "Export the variable {{variableName}} directly.",
+      preferNamedExport: 'Export the variable {{variableName}} directly.',
     },
     hasSuggestions: true,
     fixable: 'code',
@@ -24,7 +24,9 @@ const rule: TSESLint.RuleModule<"preferNamedExport", []> = {
       ExportDefaultDeclaration(node) {
         if (node.declaration.type === 'Identifier') {
           const variableName = node.declaration.name;
-          const variable = context.getScope().variables.find((v) => v.name === variableName);
+          const variable = context
+            .getScope()
+            .variables.find((v) => v.name === variableName);
           const variableDeclarationNode = variable?.defs[0].node.parent;
 
           if (variableDeclarationNode?.type === 'VariableDeclaration') {
@@ -35,7 +37,7 @@ const rule: TSESLint.RuleModule<"preferNamedExport", []> = {
               fix(fixer) {
                 return [
                   fixer.insertTextBefore(variableDeclarationNode, 'export '),
-                  fixer.remove(node), 
+                  fixer.remove(node),
                 ];
               },
             });
