@@ -1,4 +1,4 @@
-import pkg from '../../package.json';
+import pkg from '@/package.json';
 const name: string = pkg.name;
 let pluginId = name;
 

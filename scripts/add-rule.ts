@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import { pluginId } from './lib/plugin-id';
-(() => {
+import { resolvePath } from './lib/resolve-path';
+
+(async () => {
   const ruleId = process.argv[2];
 
   // Require rule ID.
@@ -11,9 +13,23 @@ import { pluginId } from './lib/plugin-id';
     return;
   }
 
-  const docPath = path.resolve(__dirname, '../docs/rules', `${ruleId}.md`);
-  const rulePath = path.resolve(__dirname, '../src/rules', `${ruleId}.ts`);
-  const testPath = path.resolve(__dirname, '../tests/rules', `${ruleId}.ts`);
+  const docPath = path.resolve(
+    __dirname,
+    resolvePath('@/docs/rules'),
+    `${ruleId}.md`
+  );
+
+  const rulePath = path.resolve(
+    __dirname,
+    resolvePath('@/src/rules'),
+    `${ruleId}.ts`
+  );
+
+  const testPath = path.resolve(
+    __dirname,
+    resolvePath('@/tests/rules'),
+    `${ruleId}.ts`
+  );
 
   // Overwrite check.
   for (const filePath of [docPath, rulePath, testPath]) {
@@ -81,7 +97,7 @@ export = rule;
     testPath,
     `
 import { TSESLint } from "@typescript-eslint/experimental-utils";
-import rule from "../../src/rules/${ruleId}";
+import rule from "@/src/rules/${ruleId}";
 
 new TSESLint.RuleTester().run("${ruleId}", rule, {
   valid: [],

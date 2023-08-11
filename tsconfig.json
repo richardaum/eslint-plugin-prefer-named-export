@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "es2015",
     "module": "commonjs",
-    "rootDir": "src",
     "outDir": "dist",
     "declaration": false,
     "strict": true,
@@ -13,7 +12,10 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
-  "include": ["src"]
+  "include": ["**/*"]
 }

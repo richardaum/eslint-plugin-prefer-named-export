@@ -3,6 +3,7 @@ import path from 'path';
 import { pluginId } from './plugin-id';
 import { rules } from './rules';
 import type { RuleInfo } from './rules';
+import { resolvePath } from './resolve-path';
 
 type ListFormatOptions = {
   type?: 'conjunction' | 'disjunction' | 'unit';
@@ -19,9 +20,9 @@ declare namespace Intl {
 
 const headerPattern = /^#.+\n(?:>.+\n)*\n+/u;
 const footerPattern = /\n+## Implementation[\s\S]*$/u;
-const ruleRoot = path.resolve(__dirname, '../../src/rules');
-const testRoot = path.resolve(__dirname, '../../tests/rules');
-const docsRoot = path.resolve(__dirname, '../../docs/rules');
+const ruleRoot = resolvePath('@/src/rules');
+const testRoot = resolvePath('@/tests/rules');
+const docsRoot = resolvePath('@/docs/rules');
 const listFormatter = new Intl.ListFormat('en', { type: 'conjunction' });
 
 /**

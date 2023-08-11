@@ -1,7 +1,7 @@
 import fs from 'fs';
-import path from 'path';
 import { categories } from './rules';
 import type { RuleInfo, CategoryInfo } from './rules';
+import { resolvePath } from './resolve-path';
 
 /**
  * Render a given rule as a table row.
@@ -29,7 +29,7 @@ ${category.rules.map(renderRule).join('\n')}
 `;
 }
 
-const filePath = path.resolve(__dirname, '../../README.md');
+const filePath = resolvePath('@/README.md');
 const content = categories.map(renderCategory).filter(Boolean).join('\n');
 
 fs.writeFileSync(
