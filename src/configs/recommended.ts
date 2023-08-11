@@ -2,6 +2,5 @@
 
 export = {
   plugins: ['prefer-named-export'],
-  rules: {
-  },
+  rules: {},
 };

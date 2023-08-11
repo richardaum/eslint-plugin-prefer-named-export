@@ -8,7 +8,7 @@ const rule: TSESLint.RuleModule<'preferNamedExport', []> = {
     docs: {
       // TODO: write the rule summary.
       description: '',
-      recommended: false,
+      recommended: 'error',
       url: '',
     },
     messages: {

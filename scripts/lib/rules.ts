@@ -42,8 +42,6 @@ export const rules: RuleInfo[] = fs
     };
   });
 
-console.log({ rules });
-
 export const categories: CategoryInfo[] = Object.entries({
   problem: 'Possible Errors',
   suggestion: 'Best Practices',
