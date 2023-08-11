@@ -1,7 +1,5 @@
 # xxxx/example-rule
-
 > An example rule.
->
 > - ⭐️ This rule is included in `plugin:xxxx/recommended` preset.
 
 This is an example.
