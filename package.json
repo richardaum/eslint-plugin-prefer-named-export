@@ -44,7 +44,7 @@
   },
   "lint-staged": {
     "*.{js,ts}": [
-      "lint --fix",
+      "eslint '**/*.{js,ts}' --fix",
       "prettier --write"
     ],
     "*.{json,yaml,md}": [

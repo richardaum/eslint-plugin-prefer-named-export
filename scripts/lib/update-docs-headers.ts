@@ -66,7 +66,7 @@ function renderFooter(rule: RuleInfo): string {
     .relative(docsPath, path.join(ruleRoot, `${rule.name}.ts`))
     .replace(/\\/gu, '/');
   const testPath = path
-    .relative(docsPath, path.join(testRoot, `${rule.name}.ts`))
+    .relative(docsPath, path.join(testRoot, `${rule.name}.test.ts`))
     .replace(/\\/gu, '/');
 
   return `\n\n## Implementation\n\n- [Rule source](${rulePath})\n- [Test source](${testPath})`;

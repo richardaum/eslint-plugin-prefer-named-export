@@ -2,3 +2,5 @@
 /node_modules
 /dist
 fixtures
+*.md
+src/index.ts

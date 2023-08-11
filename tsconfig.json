@@ -1,7 +1,4 @@
 {
-  "ts-node": {
-    "transpileOnly": true
-  },
   "extends": "./tsconfig.base.json",
   "compilerOptions": {},
   "include": ["**/*"]

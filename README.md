@@ -41,11 +41,10 @@ See also [Configuring ESLint](https://eslint.org/docs/user-guide/configuring).
 ## Rules
 
 <!--RULE_TABLE_BEGIN-->
-
 ### Possible Errors
 
-| Rule ID                                                                        | Description                                                                                                                                                                                                                                                    |       |
-| :----------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---: |
+| Rule ID | Description |    |
+|:--------|:------------|:--:|
 | [prefer-named-export/prefer-named-export](./docs/rules/prefer-named-export.md) | This rule enforces the use of named exports instead of default exports. It checks for export statements that use the export default syntax with an identifier as the default export, and suggests exporting the variable directly with a named export instead. | ⭐️✒️ |
 
 <!--RULE_TABLE_END-->
