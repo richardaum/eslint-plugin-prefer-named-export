@@ -76,12 +76,11 @@ See also [Configuring ESLint](https://eslint.org/docs/user-guide/configuring).
 ## Rules
 
 <!--RULE_TABLE_BEGIN-->
+### Possible Errors
 
-### Stylistic Issues
-
-| Rule ID                                           | Description      |     |
-| :------------------------------------------------ | :--------------- | :-: |
-| [prefer-named-export/example-rule](./docs/rules/example-rule.md) | An example rule. | ⭐️ |
+| Rule ID | Description |    |
+|:--------|:------------|:--:|
+| [prefer-named-export/prefer-named-export](./docs/rules/prefer-named-export.md) | (no description) | ⭐️✒️ |
 
 <!--RULE_TABLE_END-->
 
