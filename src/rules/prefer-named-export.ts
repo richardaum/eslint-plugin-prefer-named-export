@@ -2,7 +2,6 @@ import { TSESLint } from '@typescript-eslint/experimental-utils';
 
 const rule: TSESLint.RuleModule<'preferNamedExport', []> = {
   defaultOptions: [],
-
   meta: {
     type: 'problem',
     docs: {
@@ -12,7 +11,6 @@ const rule: TSESLint.RuleModule<'preferNamedExport', []> = {
         'and suggests exporting the variable directly with a named export instead.',
       ].join(' '),
       recommended: 'error',
-      url: '',
     },
     messages: {
       preferNamedExport: 'Export the variable {{variableName}} directly.',
@@ -21,15 +19,13 @@ const rule: TSESLint.RuleModule<'preferNamedExport', []> = {
     fixable: 'code',
     schema: [],
   },
-
   create(context) {
     return {
       ExportDefaultDeclaration(node) {
         if (node.declaration.type === 'Identifier') {
           const variableName = node.declaration.name;
-          const variable = context
-            .getScope()
-            .variables.find((v) => v.name === variableName);
+          const { variables } = context.getScope();
+          const variable = variables.find((v) => v.name === variableName);
           const variableDeclarationNode = variable?.defs[0].node.parent;
 
           if (variableDeclarationNode?.type === 'VariableDeclaration') {

@@ -7,7 +7,7 @@ const tsConfig = loadTsConfig();
 const config: Config = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  testMatch: ['**/tests/**/*.ts'],
+  testMatch: ['**/tests/**/*.test.ts'],
   moduleNameMapper: pathsToModuleNameMapper(tsConfig.paths, {
     prefix: tsConfig.absoluteBaseUrl,
   }),
