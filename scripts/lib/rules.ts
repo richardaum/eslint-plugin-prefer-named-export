@@ -9,7 +9,7 @@ export type RuleInfo = {
   filePath: string;
   id: string;
   name: string;
-  category: string;
+  type: string;
   description: string;
   recommended: boolean;
   deprecated: boolean;
@@ -37,17 +37,20 @@ export const rules: RuleInfo[] = fs
       deprecated: Boolean(meta.deprecated),
       fixable: Boolean(meta.fixable),
       replacedBy: [],
+      type: meta.type,
       ...meta.docs,
     };
   });
 
-export const categories: CategoryInfo[] = [
-  'Possible Errors',
-  'Best Practices',
-  'Stylistic Issues',
-].map(
-  (id): CategoryInfo => ({
-    id,
-    rules: rules.filter((rule) => rule.category === id && !rule.deprecated),
+console.log({ rules });
+
+export const categories: CategoryInfo[] = Object.entries({
+  problem: 'Possible Errors',
+  suggestion: 'Best Practices',
+  layout: 'Stylistic Issues',
+}).map(
+  ([type, category]): CategoryInfo => ({
+    id: category,
+    rules: rules.filter((rule) => rule.type === type && !rule.deprecated),
   })
 );
