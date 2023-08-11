@@ -2,9 +2,23 @@
   "name": "eslint-plugin-prefer-named-export",
   "version": "1.0.0",
   "description": "",
-  "engines": {
-    "node": ">=8.10.0"
+  "keywords": [
+    "typescript",
+    "template",
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "homepage": "https://github.com/richardaum/eslint-plugin-prefer-named-export#readme",
+  "bugs": {
+    "url": "https://github.com/richardaum/eslint-plugin-prefer-named-export/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardaum/eslint-plugin-prefer-named-export.git"
+  },
+  "license": "MIT",
+  "author": "",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -24,12 +38,18 @@
     "test": "npm run test:coverage",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "release": "semantic-release",
+    "release": "release-it",
     "add-rule": "tsx scripts/add-rule",
     "update": "tsx scripts/update"
   },
-  "peerDependencies": {
-    "eslint": "*"
+  "lint-staged": {
+    "*.{js,ts}": [
+      "lint --fix",
+      "prettier --write"
+    ],
+    "*.{json,yaml,md}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@typescript-eslint/experimental-utils": "^5.62.0"
@@ -45,6 +65,7 @@
     "lint-staged": "^13.2.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.0.1",
+    "release-it": "^16.1.4",
     "rimraf": "^5.0.1",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
@@ -52,31 +73,14 @@
     "tsx": "^3.12.7",
     "typescript": "^5.1.6"
   },
-  "lint-staged": {
-    "*.{js,ts}": [
-      "lint --fix",
-      "prettier --write"
-    ],
-    "*.{json,yaml,md}": [
-      "prettier --write"
-    ]
+  "peerDependencies": {
+    "eslint": "*"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/???/eslint-plugin-prefer-named-export.git"
+  "packageManager": "yarn@3.6.1",
+  "engines": {
+    "node": ">=8.10.0"
   },
-  "keywords": [
-    "typescript",
-    "template",
-    "eslint",
-    "eslintplugin",
-    "eslint-plugin"
-  ],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/???/eslint-plugin-prefer-named-export/issues"
-  },
-  "homepage": "https://github.com/???/eslint-plugin-prefer-named-export#readme",
-  "packageManager": "yarn@3.6.1"
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
 }
