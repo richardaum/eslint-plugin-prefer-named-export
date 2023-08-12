@@ -89,7 +89,7 @@ const rule: TSESLint.RuleModule<"", []> = {
   },
 };
 
-export default rule;
+export = rule;
 `
   );
 

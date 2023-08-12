@@ -9,11 +9,11 @@ const rawContent = `/* eslint-disable @typescript-eslint/no-var-requires */
 
 export = {
   configs: {
-    recommended: require("./configs/recommended").default,
+    recommended: require("./configs/recommended"),
   },
   rules: {
     ${rules
-      .map((rule) => `"${rule.name}": require("./rules/${rule.name}").default`)
+      .map((rule) => `"${rule.name}": require("./rules/${rule.name}")`)
       .join(',\n    ')}
   },
 };

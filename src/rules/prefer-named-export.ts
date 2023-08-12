@@ -47,4 +47,4 @@ const rule: TSESLint.RuleModule<'preferNamedExport', []> = {
   },
 };
 
-export default rule;
+export = rule;
