@@ -55,7 +55,7 @@ This plugin follows [Semantic Versioning](http://semver.org/) and [ESLint's Sema
 
 ## Changelog
 
-- [GitHub Releases](https://github.com/richardaum/eslint-plugin-prefer-named-export/releases)
+- [GitHub Releases](https://github.com/richardaum/eslint-plugin-prefer-named-export/tags)
 
 ## Contributing
 
