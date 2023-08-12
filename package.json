@@ -4,10 +4,11 @@
   "description": "",
   "keywords": [
     "typescript",
-    "template",
     "eslint",
     "eslintplugin",
-    "eslint-plugin"
+    "eslint-plugin",
+    "name-export",
+    "default-export"
   ],
   "homepage": "https://github.com/richardaum/eslint-plugin-prefer-named-export#readme",
   "bugs": {
