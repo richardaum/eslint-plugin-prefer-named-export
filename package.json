@@ -19,7 +19,7 @@
     "url": "git+https://github.com/richardaum/eslint-plugin-prefer-named-export.git"
   },
   "license": "MIT",
-  "author": "",
+  "author": "Richard Lopes",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -27,19 +27,19 @@
   "scripts": {
     "prepare": "husky install",
     "clean": "rimraf dist",
-    "prebuild": "npm run clean",
+    "prebuild": "yarn clean",
     "build": "tsc -p tsconfig.build.json",
     "lint": "run-s lint:ts lint:eslint lint:prettier",
     "lint:ts": "tsc --noEmit",
     "lint:eslint": "eslint '**/*.{js,ts}'",
     "lint:prettier": "prettier '**/*.{js,ts,json,yaml,md}'",
     "fix": "run-s fix:eslint fix:prettier",
-    "fix:eslint": "npm run lint:eslint -- --fix",
-    "fix:prettier": "npm run lint:prettier -- --write",
-    "test": "npm run test:coverage",
+    "fix:eslint": "yarn lint:eslint -- --fix",
+    "fix:prettier": "yarn lint:prettier -- --write",
+    "test": "yarn test:coverage",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "release": "release-it",
+    "release": "yarn build && release-it",
     "add-rule": "tsx scripts/add-rule",
     "update": "tsx scripts/update"
   },
