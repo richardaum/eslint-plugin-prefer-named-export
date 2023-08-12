@@ -28,7 +28,7 @@ export const rules: RuleInfo[] = fs
   .map((filename): RuleInfo => {
     const filePath = path.join(rootDir, filename);
     const name = filename.slice(0, -3);
-    const rule = require(filePath).default;
+    const rule = require(filePath);
     const { meta } = rule;
 
     return {
