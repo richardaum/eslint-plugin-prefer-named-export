@@ -26,18 +26,26 @@ const rule: TSESLint.RuleModule<'preferNamedExport', []> = {
           const variableName = node.declaration.name;
           const { variables } = context.getScope();
           const variable = variables.find((v) => v.name === variableName);
-          const variableDeclarationNode = variable?.defs[0].node.parent;
+          const variableNode = variable?.defs[0].node.parent;
 
-          if (variableDeclarationNode?.type === 'VariableDeclaration') {
+          if (variableNode?.type === 'VariableDeclaration') {
+            const sourceCode = context.getSourceCode();
+            const parentNode = variableNode?.parent;
+            const parentNodeSourceCode = sourceCode.getText(parentNode);
+            const isAlreadyBeignExported =
+              parentNodeSourceCode.startsWith('export ');
+
             context.report({
-              node: variableDeclarationNode,
+              node: variableNode,
               messageId: 'preferNamedExport',
               data: { variableName },
               fix(fixer) {
-                return [
-                  fixer.insertTextBefore(variableDeclarationNode, 'export '),
+                const fixers = [
+                  !isAlreadyBeignExported &&
+                    fixer.insertTextBefore(variableNode, 'export '),
                   fixer.remove(node),
                 ];
+                return fixers.filter(Boolean) as TSESLint.RuleFix[];
               },
             });
           }

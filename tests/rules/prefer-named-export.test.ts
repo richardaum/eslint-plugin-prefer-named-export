@@ -13,7 +13,22 @@ describe('eslint-plugin-prefer-named-export', () => {
       {
         code: getCode('@/tests/rules/fixtures/wrong.input.ts'),
         output: getCode('@/tests/rules/fixtures/wrong.output.ts'),
-        errors: [{ messageId: 'preferNamedExport' }],
+        errors: [
+          {
+            messageId: 'preferNamedExport',
+            data: { variableName: 'MyComponent' },
+          },
+        ],
+      },
+      {
+        code: getCode('@/tests/rules/fixtures/already-exported.input.ts'),
+        output: getCode('@/tests/rules/fixtures/already-exported.output.ts'),
+        errors: [
+          {
+            messageId: 'preferNamedExport',
+            data: { variableName: 'alreadyExported' },
+          },
+        ],
       },
     ],
   });
