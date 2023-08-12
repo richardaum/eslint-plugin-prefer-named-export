@@ -39,7 +39,7 @@
     "test": "yarn test:coverage",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "release": "yarn build && release-it",
+    "release": "yarn build && env-cmd -f .env.local release-it",
     "add-rule": "tsx scripts/add-rule",
     "update": "tsx scripts/update"
   },
@@ -60,6 +60,7 @@
     "@types/jest": "^29.5.3",
     "@typescript-eslint/eslint-plugin": "^6.3.0",
     "@typescript-eslint/parser": "^6.3.0",
+    "env-cmd": "^10.1.0",
     "eslint": "^8.46.0",
     "husky": "^8.0.3",
     "jest": "^29.6.2",

@@ -15,3 +15,7 @@
 
 # Coverage
 coverage
+
+# .env
+.env.local
+.env.local*
